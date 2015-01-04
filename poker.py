@@ -109,7 +109,7 @@ def go():
 def go_gbc():
     data = get_analyze_data()
 
-    model_gbm = GradientBoostingClassifier(n_estimators=1024)
+    model_gbm = GradientBoostingClassifier(n_estimators=1600)
 
     print "Go!!!"
     print "GBM..."
@@ -121,7 +121,7 @@ def go_gbc():
     print "..."
     model_gbm.fit(train, target)
     result.insert(1,'hand', model_gbm.predict(test))
-    result.to_csv('./test_gbm_1024.csv', index=False)
+    result.to_csv('./test_gbm_1600.csv', index=False)
 
 start = time.clock()
 # start()
